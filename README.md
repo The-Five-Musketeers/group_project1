@@ -1,5 +1,5 @@
 Adding README.md - will make changes as needed.
-![Example Image](./Images/Airbnb%20Graphic.webp)
+![Colorful infographic illustrating various Airbnb data metrics for New York City, including rental statistics, neighborhood distribution, and review counts, presented in a stylized cityscape with charts and graphs](./Images/Airbnb%20Graphic.webp)
 
 # Airbnb New York City Listings Data Visualization
 
@@ -7,11 +7,11 @@ Adding README.md - will make changes as needed.
 
 1. [Overview](#overview)
 2. [Graph Descriptions](#graph-descriptions)
-   1. [Listings by Room Type](#1-listings-by-room-type)
-   2. [Neighborhoods Word Cloud](#2-neighborhoods-word-cloud)
-   3. [Reviews per Borough](#3-reviews-per-borough)
-   4. [Scatter Plot and Map of Listings](#4-scatter-plot-and-map-of-listings)
-   5. [Map of Airbnb Listings by Neighborhood Group](#5-map-of-airbnb-listings-by-neighborhood-group)
+   - [Listings by Room Type](#1-listings-by-room-type)
+   - [Neighborhoods Word Cloud](#2-neighborhoods-word-cloud)
+   - [Reviews per Borough](#3-reviews-per-borough)
+   - [Scatter Plot and Map of Listings](#4-scatter-plot-and-map-of-listings)
+   - [Map of Airbnb Listings by Neighborhood Group](#5-map-of-airbnb-listings-by-neighborhood-group)
 3. [Data Source](#data-source)
 4. [Conclusion](#conclusion)
 
@@ -23,21 +23,23 @@ This document provides a detailed description of the data visualizations related
 
 ## Graph Descriptions
 
-### 1. Listings by Room Type
+### 1. Scatter Plot and Map of Listings
 
-- **Description**: This bar chart illustrates the distribution of Airbnb listings by room type.
-- **Types**:
-  - Entire home/apt: Represents listings where guests have the entire property to themselves.
-  - Private room: Indicates listings that offer private rooms within a shared property.
-  - Hotel room: Includes listings categorized under the traditional hotel room setup.
-  - Shared room: Listings where the space is shared with other guests.
+![Scatter Plot 1](./Images/Vadim%20-%20Scatter%20Plot%20of%20NYC.png.png)
+![Scatter Plot 2](./Images/Vadim%20-%20Scatter%20Plot%20+%20Map.png)
+
+- **Description**: These visualizations combine a scatter plot and a map, marking the geographical distribution of Airbnb listings across New York City's boroughs.
 
 ### 2. Neighborhoods Word Cloud
+
+![Neighborhoods Word Cloud](./Images/Vadim%20-%20Neighberhoods%20Word%20Cloud.png)
 
 - **Description**: A word cloud highlighting the most popular neighborhoods for Airbnb listings in New York City.
 - **Features**: The size of each neighborhood's name indicates its frequency or popularity among listings. Major neighborhoods like "East Village", "Williamsburg", and "Harlem" appear prominently.
 
 ### 3. Reviews per Borough
+
+![Reviews per Borough](./Images/Vadim%20-%20Reviews%20per%20Borough.png)
 
 - **Description**: A pie chart showing the percentage distribution of reviews across different boroughs of New York City.
 - **Boroughs**:
@@ -45,20 +47,16 @@ This document provides a detailed description of the data visualizations related
   - Brooklyn: Follows closely, suggesting it's also a popular choice for Airbnb users.
   - Queens, Bronx, Staten Island: These areas have fewer reviews compared to Manhattan and Brooklyn.
 
-### 4. Scatter Plot and Map of Listings
+### 4. Listings by Room Type
 
-- **Description**: This visualization combines a scatter plot and a map, marking the geographical distribution of Airbnb listings across New York City's boroughs.
-- **Color Code**:
-  - Red: Manhattan
-  - Blue: Brooklyn
-  - Green: Queens
-  - Purple: Bronx
-  - Orange: Staten Island
+![Listings by Room Type](./Images/Vadim%20-%20Listings%20by%20Room%20Type.png)
 
-### 5. Map of Airbnb Listings by Neighborhood Group
-
-- **Description**: A detailed geographical map showing the spread of Airbnb listings in New York City, categorized by neighborhood groups.
-- **Key Points**: The map provides a visual representation of listings density and distribution, which can be useful for both potential renters and researchers analyzing market trends.
+- **Description**: This bar chart illustrates the distribution of Airbnb listings by room type.
+- **Types**:
+  - Entire home/apt: Represents listings where guests have the entire property to themselves.
+  - Private room: Indicates listings that offer private rooms within a shared property.
+  - Hotel room: Includes listings categorized under the traditional hotel room setup.
+  - Shared room: Listings where the space is shared with other guests.
 
 ## Installation
 
