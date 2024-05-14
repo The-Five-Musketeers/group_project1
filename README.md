@@ -1,4 +1,3 @@
-Adding README.md - will make changes as needed.
 ![Colorful infographic illustrating various Airbnb data metrics for New York City, including rental statistics, neighborhood distribution, and review counts, presented in a stylized cityscape with charts and graphs](./Images/Airbnb%20Graphic.webp)
 
 # Airbnb New York City Listings Data Visualization
