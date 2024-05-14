@@ -25,7 +25,7 @@ This document provides a detailed description of the data visualizations related
 
 ### 1. Scatter Plot and Map of Listings
 
-![Scatter Plot 1](./Images/Vadim%20-%20Scatter%20Plot%20of%20NYC.png.png)
+![Scatter Plot 1](./Images/Vadim%20-%20Scatter%20Plot%20of%20NYC.png)
 ![Scatter Plot 2](./Images/Vadim%20-%20Scatter%20Plot%20+%20Map.png)
 
 - **Description**: These visualizations combine a scatter plot and a map, marking the geographical distribution of Airbnb listings across New York City's boroughs.
