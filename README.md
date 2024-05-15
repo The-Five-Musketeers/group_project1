@@ -17,6 +17,9 @@
    - [Average Price By Borough](#7-average-price-by-borough)
    - [Average Price By Neighborhood](#8-average-price-by-neighborhood)
    - [Average Price By Top 5 Neighborhood over Time](#9-average-price-by-top-5-neighborhood-over-time)
+   - [Host with the most listings count](#10-host-with-the-most-listings-count)
+   - [Is the NYC Airbnb Law Effective](#11-is-the-nyc-airbnb-law-effective)
+   - [Who Is The Benefactor Of the NYC Law](#12-who-is-the-benefactor-of-the-nyc-law)
 4. [Data Source](#data-source)
 5. [Conclusion](#conclusion)
 
@@ -120,7 +123,7 @@ Significant Market for Private Rooms:
 
 ### 7. Average Price By Borough
 
-![Listings by Borough](./Images/Danny_Avg%20Price%20per%20Borough.png)
+![Avg Price By Borough](./Images/Danny_Avg%20Price%20per%20Borough.png)
 
 - **Description**: This bar chart illustrates the median price of NYC Airbnb listings by Borough.
 - **Types**:
@@ -131,7 +134,7 @@ Significant Market for Private Rooms:
 
 ### 8. Average Price By Neighborhood
 
-![Listings by Borough](./Images/Danny_Top%205%20Average%20Price%20per%20Neighborhood.png)
+![Avg Price By Neighborhood](./Images/Danny_Top%205%20Average%20Price%20per%20Neighborhood.png)
 
 - **Description**: This bar chart illustrates the median price of top 5 NYC Airbnb listings by Neighborhood.
 - **Types**:
@@ -143,7 +146,7 @@ Significant Market for Private Rooms:
 
 ### 9. Average Price By Top 5 Neighborhood over Time
 
-![Listings by Borough](./Images/Danny_AirBnB_Price_by_Top_5_Neighborhood_Over_Time.png)
+![Avg Price By Top 5 Neighborhood Over Time](./Images/Danny_AirBnB_Price_by_Top_5_Neighborhood_Over_Time.png)
 
 - **Description**: This line graph illustrates the median price of top 5 NYC Airbnb listings by Neighborhood over time. This is meant to dive deeper into the price trends we are seeing month over month across the available years.
 - **Types**:
@@ -168,7 +171,51 @@ Significant Market for Private Rooms:
 - xticks(rotation=45):        This command along with "plt" rotates x-axis labels for better readability.
 - .show():                    This method, added to "plt," displays the image (in this case a bar type chart) produced.
 
-### 11. Libraries used
+### 11. Is The NYC Airbnb Law Effective
+![Is the NYC Airbnb Law Effective](./Images/Alan_Khalili_Airbnb_Prop_Count_Time_Series.png)
+- **Description**: This line graph illustrates the number of Airbnb rental units, subject to the NYC law that are available per Borough from July 2023 to April 2024.
+- **Types**:
+- X-axis: Represents the time series.
+- Y-axis: Indicates the number of Airbnb rental units impacted by the law.
+- Verticle red dotted line - date law went into effect.
+- **Findings**:
+- As expected, leading up the the law going into place in Sept 23, the number of units decreased significantly.  The decline tapers off afterwards.  It isn't clear to what extent the decline is due to units actually leaving the system or if units changed thier description to avoid detection.  Visual analysis of the total Airbnb units (all property types) indicated that the risk of this appeared low. 
+
+![NYC Rental Rates by Bourough](./Images/Alan_Khalili_Rental_Rate_Time_Series.png)
+- **Description**: This line graph illustrates the average Airbnb rental rate, subject to the NYC law, by Borough from July 2023 to April 2024.
+- **Types**:
+- X-axis: Represents the time series.
+- Y-axis: Indicates the Airbnb rental rate in a specific Bourough.
+- Verticle red dotted line - date law went into effect.
+- **Findings**:
+- The median rental rate declined after the law became effective and started rising in early 2024.  In isolation, this is expected as the law's objective was to increase the number of units in the marketplace.  But, as seen below, the number of units in the marketplace delined.
+
+![NYC Rental Inventory by Bourough](./Images/Alan_Khalili_Rental_Inventory_Time_Series.png)
+- **Description**: This line graph illustrates the average number of rental inventory, by Borough, from July 2023 to April 2024.
+- **Types**:
+- X-axis: Represents the time series.
+- Y-axis: Indicates the inventory  of rental units in a specific Bourough.
+- Verticle red dotted line - date law went into effect.
+- **Findings**:
+- Oddly, average rental inventory declined after the law became effective, which indicated there were larger forces at work.
+- **Conclusoin**:
+- Dispite more units theoretically being placed into the market from the law, in reality, the inventory went down and rental rates receded for a period.  While a portion of the rental rate decline was due to seasonality, the change in trend was not as expected and if the law did have an impact on the availablit of NYC housing, it was immaterial.
+
+### 12. Who Is The Benefactor Of the NYC Law
+![NYC Rental Units Distribution Pie Chart](./Images/Alan_Khalili_Rental_Units_Pie_Chart.png)
+- **Description**: This pie chart illustrates the breakout of short and long term housing in NYC.  It was used to determine the potential impact the law would have on both rental unit and hotel room inventory.
+- **Types**:
+- Apartments: Represents the percet of housing in NYC that are from apartments
+- Hotel: Represents the percet of housing in NYC that are from hotels
+- Airbnb at risk: Represents the percet of housing in NYC that are from Airbnb units that are subject to the law, that could be apartments
+- **Findings**:
+- Compared to the number of apartments in NYC, the Airbnb units effected by the law would have a marginal effect, whereas the impact on hotels is significant.  Just Airbnb would remove 10% of the hotel room inventory, which would have a significantn impact on vacancy and room rates.
+- **Conclusion**:
+- Assuming VBRO and Airbnb had similar market share, the benefit to the hospitality industry is significant (15-20% inventory reduction), resulting in higher rates and higher occupancy.
+- NYC taxable revenue base goes up from hsopitality related taxes.
+- As other cities look to NYC to enact similar laws, benefits to the hospitality industry extends beyond NYC as thier interest are in cities all over the world, NYC.
+
+## Libraries Used
 The libraries nelow were imported and used.
 - pandas as pd:               This is an open-source software library built on top of Python specifically for data manipulation and analysis, 
                               Pandas offers data structure and operations for powerful, flexible, and easy-to-use data analysis and manipulation
@@ -192,23 +239,28 @@ The libraries nelow were imported and used.
 
 These visualizations offer valuable insights into the Airbnb rental landscape in New York City, helping to understand trends, guest preferences, and geographical demand distribution.
 
-## REFERENCES
+Furthermore, the NYC law targeting short term housing rentals appears to benefit the hotel industry more than housing.  As this law will be a case study for large cities around the world, the hotel industry could benefit significantly.
 
-The data used in these visualizations are sourced from Airbnb's publicly available datasets:
+## References
+
+1. The data used in the Airbnb visualizations are sourced from:
 [Airbnb's publicly available datasets](https://insideairbnb.com/get-the-data/)
 
-1. https://pandas.pydata.org/
+2. The data used for rental market rates and inventory was from Street Easy.  (https://streeteasy.com/blog/data-dashboard/[object%20Object]?agg=Total&metric=Inventory&type=Sales&bedrooms=Any%20Bedrooms&property=Any%20Property%20Type&minDate=2010-01-01&maxDate=2024-04-01&area=Flatiron,Brooklyn%20Heights)
 
-2. https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
+3. https://pandas.pydata.org/
 
-3. https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=What%20is%20NumPy%3F,%2C%20fourier%20transform%2C%20and%20matrices.
+4. https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
 
-4. https://seaborn.pydata.org/tutorial/introduction.html
+5. https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=What%20is%20NumPy%3F,%2C%20fourier%20transform%2C%20and%20matrices.
 
-5. https://www.analyticsvidhya.com/blog/2021/10/interactive-plots-in-python-with-plotly-a-complete-guide/#:~:text=Plotly%20is%20an%20open%2Dsource,variety%20of%20complex%20plotting%20options.
+6. https://seaborn.pydata.org/tutorial/introduction.html
 
-6. https://medium.com/tech-data-hub/a-deep-dive-into-the-os-library-in-python-functions-features-and-best-practices-582567bebb06#:~:text=The%20os%20library%20in%20Python%20is%20one%20of%20the%20most,environment%20variables%2C%20and%20even%20processes.
+7. https://www.analyticsvidhya.com/blog/2021/10/interactive-plots-in-python-with-plotly-a-complete-guide/#:~:text=Plotly%20is%20an%20open%2Dsource,variety%20of%20complex%20plotting%20options.
 
-7. https://lukianovihor.medium.com/python-environment-variables-using-dotenv-library-71529ad0e9c3#:~:text=The%20fundamental%20way%20to%20read,variables%20with%20os%20the%20library.
+8. https://medium.com/tech-data-hub/a-deep-dive-into-the-os-library-in-python-functions-features-and-best-practices-582567bebb06#:~:text=The%20os%20library%20in%20Python%20is%20one%20of%20the%20most,environment%20variables%2C%20and%20even%20processes.
 
-8. https://pypi.org/project/wordcloud/#:~:text=The%20wordcloud%20library%20is%20MIT,when%20creating%20a%20WordCloud%20object.
+9. https://lukianovihor.medium.com/python-environment-variables-using-dotenv-library-71529ad0e9c3#:~:text=The%20fundamental%20way%20to%20read,variables%20with%20os%20the%20library.
+
+10. https://pypi.org/project/wordcloud/#:~:text=The%20wordcloud%20library%20is%20MIT,when%20creating%20a%20WordCloud%20object.
+
