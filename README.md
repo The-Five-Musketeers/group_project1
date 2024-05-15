@@ -83,7 +83,37 @@ This document provides a detailed description of the data visualizations related
 - Brooklyn and Queens show moderate activity, each hosting over 1000 listings. These boroughs are popular among visitors seeking a more residential atmosphere while still being accessible to Manhattan.
 - The Bronx and Staten Island have considerably fewer listings, suggesting lower tourist traffic and potentially stricter local regulations or lesser demand.
 
+### 7. Avg Price By Borough
 
+![Listings by Borough](./Images/Danny_Avg%20Price%20per%20Borough.png)
+
+- **Description**: This bar chart illustrates the median price of NYC Airbnb listings by Borough.
+- **Types**:
+- X-axis: Represents the five boroughs of New York City — Manhattan, Brooklyn, Queens, Bronx, and Staten Island.
+- Y-axis: Indicates the avg price of Airbnb listings in each borough.
+- Manhattan had the highest avg price on listings.
+- Brookyln and Staten Island follow. 
+
+### 8. Avg Price By Neighborhood
+
+![Listings by Borough](./Images/Danny_Top%205%20Average%20Price%20per%20Neighborhood.png)
+
+- **Description**: This bar chart illustrates the median price of top 5 NYC Airbnb listings by Neighborhood.
+- **Types**:
+- X-axis: Represents the top five neigborhoods of New York City based on our data.
+- Y-axis: Indicates the avg price of Airbnb listings in each neighborhood.
+- Tribeca and Soho had the highest avg price
+- DUMBO in Brooklyn rounds out the top 5
+
+### 9. Avg Price By Top 5 Neighborhood over Time
+
+![Listings by Borough](./Images/Danny_AirBnB_Price_by_Top_5_Neighborhood_Over_Time.png)
+
+- **Description**: This line graph illustrates the median price of top 5 NYC Airbnb listings by Neighborhood over time.  This is meant to dive deeper into the price trends we are seeing month over month across the available years.
+- **Types**:
+- X-axis: Represents the top five neigborhoods of New York City based on our data.
+- Y-axis: Indicates the avg price of Airbnb listings in each neighborhood over time.
+- The data suggests a downard trend in pricing beginning in January of 2024, but more data is needed to see if this is a predicatble trend.
 
 ## Installation
 
