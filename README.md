@@ -57,6 +57,34 @@ This document provides a detailed description of the data visualizations related
   - Hotel room: Includes listings categorized under the traditional hotel room setup.
   - Shared room: Listings where the space is shared with other guests.
 
+
+  ### 5. Listings by Neighborhoods
+
+![Listings by Neighborhoods](./Images/Ramona%20%20-%20Listing%20by%20Neighborhood.png)
+
+- **Description**: This bar chart illustrates the distribution of Airbnb listings by neighborhoods.
+- **Types**:
+- X-axis: Represents different neighborhoods in New York City.
+- Y-axis: Indicates the total number of unique Airbnb listings in each neighborhood.
+- Midtown, Upper East Side, and Murray Hill show a high concentration of listings, each with over 700 unique properties. This suggests these areas are highly popular with Airbnb hosts, possibly due to their central location and tourist attractions.
+- Theater District and Hell's Kitchen also display a significant number of listings, highlighting their appeal, likely driven by their proximity to entertainment and dining options.
+- Bushwick shows fewer listings compared to other neighborhoods, indicating either a lower demand or lesser development of Airbnb market penetration in this area
+
+
+### 6. Listings by Boroughs
+
+![Listings by Borough](./Images/Ramona%20-%20Listing%20by%20Borough.png)
+
+- **Description**: This bar chart illustrates the distribution of Airbnb listings by neighborhoods.
+- **Types**:
+- X-axis: Represents the five boroughs of New York City — Manhattan, Brooklyn, Queens, Bronx, and Staten Island.
+- Y-axis: Indicates the total number of unique Airbnb listings in each borough.
+- Manhattan has the highest number of listings, significantly outpacing the other boroughs with over 2500 unique listings. This is likely due to its status as a major tourist and business hub.
+- Brooklyn and Queens show moderate activity, each hosting over 1000 listings. These boroughs are popular among visitors seeking a more residential atmosphere while still being accessible to Manhattan.
+- The Bronx and Staten Island have considerably fewer listings, suggesting lower tourist traffic and potentially stricter local regulations or lesser demand.
+
+
+
 ## Installation
 
 To reproduce the visualizations in this project, you will need to install the following Python libraries:
