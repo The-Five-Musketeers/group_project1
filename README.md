@@ -67,6 +67,7 @@ Various other third parties including:  NYC.gov, NYC Tourism, and the NYT for s
 
 ### Cleanup Process and Exploration Process (EDA) – included:
 Evaluating the Data Structures – which included data profiling via statistical analysis, evaluating the robustness of the types (columns) and volumes of data,(rows) data cleaning, as well as modifying object data types for visualization purposes.
+    
     Statistical anlaysis included a correlation heat map, which is included in the code, but excluded from the report due to missleading conclustions.
     Data Cleaning was addressed in two paths.  First, we reviewed object types of all data, which was primarily converting several date formats into one consistent format (via a loop) and removing all other NaN results.  We then conveted the data into a datetime foremat to perform time series analysis.  The Second path was removing irrelivant and missleading data.   Irrelivant data included columns we did not need, as well as (i) filtering out Airbnb units that were still listed, but not actively being rented for an extended period of time (thus inflating the impact of Airbnb on the anlysis) and (ii) in the case of the NYC law analysis, filtering out units that were not subject to the law (e.g. hotel rooms on Airbnb, homeowners that had a extra room to rent out).
 Looking for  Patterns and Trends – Using bar plots, scatter charts, pie charts and heatmaps, we found relationships we expected and more importantly, relationships we didn’t expect.  For example, when the NYC law went into force, the inventory of rental units accross NYC declined as well as the rental rates.  We expected the inventory to increase and rates to decrease.  That inconsistency resulted in further analysis.
@@ -234,15 +235,15 @@ Significant Market for Private Rooms:
 
 - **Description**: This pie chart illustrates the breakout of short and long term housing in NYC. It was used to determine the potential impact the law would have on both rental unit and hotel room inventory.
 - **Types**:
-- Apartments: Represents the percet of housing in NYC that are from apartments
-- Hotel: Represents the percet of housing in NYC that are from hotels
-- Airbnb at risk: Represents the percet of housing in NYC that are from Airbnb units that are subject to the law, that could be apartments
+  - Apartments: Represents the percet of housing in NYC that are from apartments
+  - Hotel: Represents the percet of housing in NYC that are from hotels
+  - Airbnb at risk: Represents the percet of housing in NYC that are from Airbnb units that are subject to the law, that could be apartments
 - **Findings**:
-- Compared to the number of apartments in NYC, the Airbnb units effected by the law would have a marginal effect, whereas the impact on hotels is significant. Just Airbnb would remove 10% of the hotel room inventory, which would have a significantn impact on vacancy and room rates.
+  - Compared to the number of apartments in NYC, the Airbnb units effected by the law would have a marginal effect, whereas the impact on hotels is significant. Just Airbnb would remove 10% of the hotel room inventory, which would have a significantn impact on vacancy and room rates.
 - **Conclusion**:
-- Assuming VBRO and Airbnb had similar market share, the benefit to the hospitality industry is significant (15-20% inventory reduction), resulting in higher rates and higher occupancy.
-- NYC taxable revenue base goes up from hsopitality related taxes.
-- As other cities look to NYC to enact similar laws, benefits to the hospitality industry extends beyond NYC as thier interest are in cities all over the world, NYC.
+  - Assuming VBRO and Airbnb had similar market share, the benefit to the hospitality industry is significant (15-20% inventory reduction), resulting in higher rates and higher occupancy.
+  - NYC taxable revenue base goes up from hsopitality related taxes.
+  - As other cities look to NYC to enact similar laws, benefits to the hospitality industry extends beyond NYC as thier interest are in cities all over the world, NYC.
 
 ## Libraries Used
 
@@ -307,9 +308,9 @@ Furthermore, the NYC law targeting short term housing rentals appears to benefit
 - Opened channel with the Airbnb corporation or association
 
 ## Contributors:
-![Contributors]
-Alan Khalili - New York City’s law restricting Airbnb’s short-term rentals – What was the goal, does it work, who benefits the most?
-Danny Gallardo - What is the average price of listings per neighborhood or neighborhood group?
-Ramona Ciobanu - Which neighborhoods have the highest concentration of listings? 
-Sezan Prudence Hessou - Who are the hosts with the most listings
-Vadim Bychock - Which boroughs have the highest concentration of listings?
+
+- Alan Khalili - New York City’s law restricting Airbnb’s short-term rentals – What was the goal, does it work, who benefits the most?
+- Danny Gallardo - What is the average price of listings per neighborhood or neighborhood group?
+- Ramona Ciobanu - Which neighborhoods have the highest concentration of listings? 
+- Sezan Prudence Hessou - Who are the hosts with the most listings
+- Vadim Bychock - Which boroughs have the highest concentration of listings?
