@@ -7,7 +7,8 @@
 1. [Overview](#overview)
 2. [Installation](#installation)
    - [Importing Libraries](#importing-libraries)
-3. [Graph Descriptions](#graph-descriptions)
+3. [Collection Process](#collection-cleaning-and-eda-process)
+4. [Graph Descriptions](#graph-descriptions--analysis)
    - [Scatter Plot and Map of Listings](#1-scatter-plot-and-map-of-listings)
    - [Neighborhoods Word Cloud](#2-neighborhoods-word-cloud)
    - [Reviews per Borough](#3-reviews-per-borough)
@@ -20,12 +21,16 @@
    - [Host with the most listings count](#10-host-with-the-most-listings-count)
    - [Is the NYC Airbnb Law Effective](#11-is-the-nyc-airbnb-law-effective)
    - [Who Is The Benefactor Of the NYC Law](#12-who-is-the-benefactor-of-the-nyc-law)
-4. [Conclusion](#conclusion)
-5. [References](#references)
+5. [Conclusion](#conclusion)
+6. [References](#references)
+7. [Contributors:](#contributors)
 
 ## Overview
 
-This document provides a detailed description of the data visualizations related to Airbnb listings in New York City, captured in several graphs.
+This project analyzes Airbnb listing data for New York City to uncover insights about rental prices, listing distributions by neighborhood, and impacts of local laws on both Airbnb’s units and short-term housing. 
+
+Using Python libraries such as Pandas, Matplotlib, Numpy, Seaborn, Wordcloud, and Plotly, we perform data cleaning, visualization, and analysis to explore various dimensions of the dataset.
+
 
 ## Installation
 
@@ -51,7 +56,27 @@ from wordcloud import WordCloud
 import datetime as dt
 ```
 
-## Graph Descriptions
+## Collection, Cleaning and EDA process
+
+### Data Collection Process/ References:
+Inside Airbnb – which is a site that scrapes the Airbnb website and advocates for affordable housing.  The data stretches from July 2023 through April 2024, during which time the NYC law on short-term housing rentals went into effect.
+
+Street Easy – is a site that tracks residential housing rates and inventory in NYC.  This site was used to determine if there were any correlation between Airbnb listings and available housing. 
+
+Various other third parties including:  NYC.gov, NYC Tourism, and the NYT for supporting data.
+
+### Cleanup Process and Exploration Process (EDA) – included:
+Evaluating the Data Structures – which included data profiling via statistical analysis, evaluating the robustness of the types (columns) and volumes of data,(rows) data cleaning, as well as modifying object data types for visualization purposes.
+    Statistical anlaysis included a correlation heat map, which is included in the code, but excluded from the report due to missleading conclustions.
+    Data Cleaning was addressed in two paths.  First, we reviewed object types of all data, which was primarily converting several date formats into one consistent format (via a loop) and removing all other NaN results.  We then conveted the data into a datetime foremat to perform time series analysis.  The Second path was removing irrelivant and missleading data.   Irrelivant data included columns we did not need, as well as (i) filtering out Airbnb units that were still listed, but not actively being rented for an extended period of time (thus inflating the impact of Airbnb on the anlysis) and (ii) in the case of the NYC law analysis, filtering out units that were not subject to the law (e.g. hotel rooms on Airbnb, homeowners that had a extra room to rent out).
+Looking for  Patterns and Trends – Using bar plots, scatter charts, pie charts and heatmaps, we found relationships we expected and more importantly, relationships we didn’t expect.  For example, when the NYC law went into force, the inventory of rental units accross NYC declined as well as the rental rates.  We expected the inventory to increase and rates to decrease.  That inconsistency resulted in further analysis.
+
+Looking for Outliers – because our work focused on medians vs averages, outliers were not as impactful.
+
+Formulating Hypotheses – Because the patterns above were not always strong enough to create a hypotheses, the EDA process became iterative where we’d revisit the data,  visualization patterns, and potential conclusions.  For example, for the NYC law, we looked into other factors, beyond our data sets, that could have been causing results that initially differed from our hypothesis.
+
+
+## Graph Descriptions & Analysis
 
 ### 1. Scatter Plot and Map of Listings
 
@@ -253,18 +278,38 @@ Furthermore, the NYC law targeting short term housing rentals appears to benefit
 
 2. The data used for rental market rates and inventory was from Street Easy. (https://streeteasy.com/blog/data-dashboard/[object%20Object]?agg=Total&metric=Inventory&type=Sales&bedrooms=Any%20Bedrooms&property=Any%20Property%20Type&minDate=2010-01-01&maxDate=2024-04-01&area=Flatiron,Brooklyn%20Heights)
 
-3. https://pandas.pydata.org/
+3. Background on NYC's law resitricting short term rentals of residential units (Airbnb):  New York Times: New York City’s Crackdown on Airbnb Is Starting. Here’s What to Expect (https://www.nytimes.com/2023/09/05/nyregion/airbnb-regulations-nyc-housing.html?searchResultPosition=1)
 
-4. https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
+4. Number of apartments in NYC:  2023 NYC Housing and Vacancy Survey (https://www.nyc.gov/assets/hpd/downloads/pdfs/about/2023-nychvs-selected-initial-findings.pdf)
 
-5. https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=What%20is%20NumPy%3F,%2C%20fourier%20transform%2C%20and%20matrices.
+5. Number of hotel rooms in NYC:  FACT SHEET: NEW YORK CITY TOURISM GENERATES $74 BILLION IN ECONOMIC IMPACT FOR STATE AND CITY ECONOMY IN 2023 (https://www.business.nyctourism.com/press-media/press-releases/year-end-tourism-numbers-announcement#)
 
-6. https://seaborn.pydata.org/tutorial/introduction.html
+6. https://pandas.pydata.org/
 
-7. https://www.analyticsvidhya.com/blog/2021/10/interactive-plots-in-python-with-plotly-a-complete-guide/#:~:text=Plotly%20is%20an%20open%2Dsource,variety%20of%20complex%20plotting%20options.
+7. https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
 
-8. https://medium.com/tech-data-hub/a-deep-dive-into-the-os-library-in-python-functions-features-and-best-practices-582567bebb06#:~:text=The%20os%20library%20in%20Python%20is%20one%20of%20the%20most,environment%20variables%2C%20and%20even%20processes.
+8. https://www.w3schools.com/python/numpy/numpy_intro.asp#:~:text=What%20is%20NumPy%3F,%2C%20fourier%20transform%2C%20and%20matrices.
 
-9. https://lukianovihor.medium.com/python-environment-variables-using-dotenv-library-71529ad0e9c3#:~:text=The%20fundamental%20way%20to%20read,variables%20with%20os%20the%20library.
+9. https://seaborn.pydata.org/tutorial/introduction.html
 
-10. https://pypi.org/project/wordcloud/#:~:text=The%20wordcloud%20library%20is%20MIT,when%20creating%20a%20WordCloud%20object.
+10. https://www.analyticsvidhya.com/blog/2021/10/interactive-plots-in-python-with-plotly-a-complete-guide/#:~:text=Plotly%20is%20an%20open%2Dsource,variety%20of%20complex%20plotting%20options.
+
+11. https://medium.com/tech-data-hub/a-deep-dive-into-the-os-library-in-python-functions-features-and-best-practices-582567bebb06#:~:text=The%20os%20library%20in%20Python%20is%20one%20of%20the%20most,environment%20variables%2C%20and%20even%20processes.
+
+12. https://lukianovihor.medium.com/python-environment-variables-using-dotenv-library-71529ad0e9c3#:~:text=The%20fundamental%20way%20to%20read,variables%20with%20os%20the%20library.
+
+13. https://pypi.org/project/wordcloud/#:~:text=The%20wordcloud%20library%20is%20MIT,when%20creating%20a%20WordCloud%20object.
+
+## Recomendation if we had more time:
+- Examining the impact of the NYC law on hotel rates/occupancy
+- Accessing archived Airbnb data
+- Group budget for the ability to purchase reliable data
+- Opened channel with the Airbnb corporation or association
+
+## Contributors:
+![Contributors]
+Alan Khalili - New York City’s law restricting Airbnb’s short-term rentals – What was the goal, does it work, who benefits the most?
+Danny Gallardo - What is the average price of listings per neighborhood or neighborhood group?
+Ramona Ciobanu - Which neighborhoods have the highest concentration of listings? 
+Sezan Prudence Hessou - Who are the hosts with the most listings
+Vadim Bychock - Which boroughs have the highest concentration of listings?
